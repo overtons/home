@@ -25,7 +25,6 @@
             <pre>
 raw_tweets <- search_tweets("incels", n = 50000, lang = "en", include_rts = FALSE)
 
-raw_tweets <- mutate(raw_tweets, text = gsub("#[A-Za-z0-9]+|@[A-Za-z0-9]+|\\w+(?:\\.\\w+)*/\\S+", "", raw_tweets$text))
 raw_tweets <- mutate(raw_tweets, gsub("http.*","", raw_tweets$text))
 raw_tweets <- mutate(raw_tweets, gsub("https.*","", raw_tweets$text))
 
